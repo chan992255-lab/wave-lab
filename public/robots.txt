@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://wave-lab.vercel.app/sitemap.xml
+Sitemap: https://wavelab-kr.vercel.app/sitemap.xml
