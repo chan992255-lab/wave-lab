@@ -47,7 +47,7 @@ function ChartArt() {
         {candles.map((h, i) => (
           <div
             key={i}
-            className={`flex-1 rounded-t-[3px] ${i % 3 === 1 ? 'bg-rose-400/60' : 'bg-emerald-400/70'}`}
+            className={`flex-1 rounded-t-[3px] ${i % 3 === 1 ? 'bg-rose-400/60' : 'bg-emerald/70'}`}
             style={{ height: `${h}%` }}
           />
         ))}
@@ -82,7 +82,7 @@ function ChatArt() {
         <div className="h-1.5 w-12 rounded-full bg-white/35" />
       </div>
       <div className="mt-0.5 flex items-center gap-1.5 self-end rounded-full border border-white/10 bg-white/[0.06] px-2 py-1">
-        <span className="h-1 w-1 rounded-full bg-emerald-400" />
+        <span className="h-1 w-1 rounded-full bg-emerald" />
         <div className="h-1 w-9 rounded-full bg-white/25" />
       </div>
     </div>
@@ -96,7 +96,7 @@ function PlanArt() {
         {[0, 1, 2, 3].map((i) => (
           <div key={i} className="flex items-center gap-1.5">
             <span
-              className={`h-2 w-2 shrink-0 rounded-full ${i < 2 ? 'bg-emerald-400/90' : 'bg-white/15'}`}
+              className={`h-2 w-2 shrink-0 rounded-full ${i < 2 ? 'bg-emerald/90' : 'bg-white/15'}`}
             />
             <div className="h-1.5 flex-1 rounded-full bg-white/20" />
           </div>
@@ -105,7 +105,7 @@ function PlanArt() {
       <div className="flex flex-col justify-between rounded-lg border border-white/10 bg-[#0B0B12]/70 p-2 backdrop-blur-sm">
         <div className="flex items-end gap-1">
           {[12, 20, 15, 26, 18].map((h, i) => (
-            <div key={i} className="flex-1 rounded-sm bg-gradient-to-t from-emerald-500/30 to-sky-400/70" style={{ height: h }} />
+            <div key={i} className="flex-1 rounded-sm bg-gradient-to-t from-emerald/30 to-sky-400/70" style={{ height: h }} />
           ))}
         </div>
         <div className="rounded-md bg-white/[0.06] px-1.5 py-1">

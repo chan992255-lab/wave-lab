@@ -44,7 +44,7 @@ export const projects: Project[] = [
     tags: ['역할 기반 UI', '초대 코드', '운동 기록', '모바일 우선'],
     url: 'https://setup-gym.vercel.app',
     kind: 'plan',
-    accent: { from: '#10B981', to: '#0EA5E9', chip: 'text-emerald-300' },
+    accent: { from: '#10B981', to: '#0EA5E9', chip: 'text-mint' },
   },
   {
     nameKo: '스쿨픽',
