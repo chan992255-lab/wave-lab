@@ -29,7 +29,14 @@
   </head>
   <body>
     <div class="stage">
-      <iframe src="/" title="모바일 미리보기"></iframe>
+      <iframe id="frame" src="/" title="모바일 미리보기"></iframe>
     </div>
+    <script>
+      // ?to=work 처럼 섹션 이름을 넘기면 해당 섹션으로 이동한 상태로 띄운다.
+      var to = new URLSearchParams(location.search).get('to');
+      if (to) {
+        document.getElementById('frame').src = '/#' + encodeURIComponent(to);
+      }
+    </script>
   </body>
 </html>
