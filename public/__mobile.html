@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex, nofollow" />
-    <title>모바일 미리보기 (390×844)</title>
+    <title>화면 미리보기</title>
     <style>
       html,
       body {
@@ -13,30 +13,34 @@
         background: #1a1a20;
       }
       .stage {
-        width: 390px;
-        height: 844px;
         margin: 0 auto;
         overflow: hidden;
         background: #0a0a0f;
       }
       iframe {
-        width: 390px;
-        height: 844px;
         border: 0;
         display: block;
       }
     </style>
   </head>
   <body>
-    <div class="stage">
-      <iframe id="frame" src="/" title="모바일 미리보기"></iframe>
+    <div class="stage" id="stage">
+      <iframe id="frame" src="/" title="미리보기"></iframe>
     </div>
     <script>
+      // 기본 390×844(모바일). ?w=1280&h=800 처럼 크기를 바꿀 수 있고,
       // ?to=work 처럼 섹션 이름을 넘기면 해당 섹션으로 이동한 상태로 띄운다.
-      var to = new URLSearchParams(location.search).get('to');
-      if (to) {
-        document.getElementById('frame').src = '/#' + encodeURIComponent(to);
-      }
+      var params = new URLSearchParams(location.search);
+      var w = Number(params.get('w')) || 390;
+      var h = Number(params.get('h')) || 844;
+      var stage = document.getElementById('stage');
+      var frame = document.getElementById('frame');
+      stage.style.width = w + 'px';
+      stage.style.height = h + 'px';
+      frame.style.width = w + 'px';
+      frame.style.height = h + 'px';
+      var to = params.get('to');
+      if (to) frame.src = '/#' + encodeURIComponent(to);
     </script>
   </body>
 </html>
