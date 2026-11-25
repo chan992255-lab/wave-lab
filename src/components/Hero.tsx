@@ -2,7 +2,7 @@ import { ArrowRight, ArrowUpRight, Globe2, MonitorSmartphone, Timer } from 'luci
 
 const stats = [
   { icon: Globe2, label: '실제 운영 중인 라이브 프로젝트', value: '6종' },
-  { icon: Timer, label: '평균 제작 기간', value: '1~4일' },
+  { icon: Timer, label: '제작 기간', value: '1~7일' },
   { icon: MonitorSmartphone, label: '모바일 · 데스크톱 대응', value: '100%' },
 ];
 
@@ -148,9 +148,9 @@ export function Hero() {
             <dl className="mt-12 grid animate-fade-up grid-cols-3 gap-4 border-t border-white/[0.07] pt-6 [animation-delay:320ms]">
               {stats.map(({ icon: Icon, label, value }) => (
                 <div key={label}>
-                  <dt className="flex items-center gap-1.5 text-[10.5px] leading-tight text-sub">
-                    <Icon className="h-3.5 w-3.5 shrink-0 text-indigo/80" />
-                    <span className="truncate">{label}</span>
+                  <dt className="flex items-start gap-1.5 text-[10.5px] leading-[1.4] text-sub">
+                    <Icon className="mt-[1px] h-3.5 w-3.5 shrink-0 text-indigo/80" />
+                    <span>{label}</span>
                   </dt>
                   <dd className="mt-1.5 text-[17px] font-semibold tracking-tight text-ink">{value}</dd>
                 </div>
