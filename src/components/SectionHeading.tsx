@@ -15,11 +15,11 @@ export function SectionHeading({ eyebrow, title, description, className = '', al
         {align === 'left' && <span className="h-px w-6 bg-gradient-to-r from-iris to-transparent" />}
         {eyebrow}
       </p>
-      <h2 className="mt-4 text-[1.75rem] font-bold leading-[1.22] tracking-[-0.025em] text-ink sm:text-[2.35rem]">
+      <h2 className="mt-4 break-keep text-[1.75rem] font-bold leading-[1.22] tracking-[-0.025em] text-ink sm:text-[2.35rem]">
         {title}
       </h2>
       {description && (
-        <p className="mt-4 text-[14.5px] leading-[1.75] text-sub sm:text-[15.5px]">{description}</p>
+        <p className="mt-4 break-keep text-[14.5px] leading-[1.75] text-sub sm:text-[15.5px]">{description}</p>
       )}
     </div>
   );

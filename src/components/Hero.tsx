@@ -115,7 +115,7 @@ export function Hero() {
               </span>
             </div>
 
-            <h1 className="mt-6 animate-fade-up text-[2.55rem] font-bold leading-[1.14] tracking-[-0.03em] text-ink [animation-delay:80ms] sm:text-[3.6rem] sm:leading-[1.08]">
+            <h1 className="mt-6 animate-fade-up break-keep text-[2.55rem] font-bold leading-[1.14] tracking-[-0.03em] text-ink [animation-delay:80ms] sm:text-[3.6rem] sm:leading-[1.08]">
               아이디어만 주시면
               <br />
               <span className="text-gradient">웹앱은 완성해서</span>
@@ -123,7 +123,7 @@ export function Hero() {
               드립니다.
             </h1>
 
-            <p className="mt-6 max-w-xl animate-fade-up text-[15px] leading-[1.75] text-sub [animation-delay:160ms] sm:text-[16.5px]">
+            <p className="mt-6 max-w-xl animate-fade-up break-keep text-[15px] leading-[1.75] text-sub [animation-delay:160ms] sm:text-[16.5px]">
               소상공인 · 브랜드 · 헬스장 · 크리에이터 · 스타트업을 위한 웹 제작 스튜디오입니다.
               기획과 디자인, 모바일 최적화 웹앱 제작, 배포까지 <span className="text-ink/85">한 번에</span> 끝내드립니다.
             </p>
