@@ -1,0 +1,18 @@
+{
+  "name": "Wave Lab — 웹앱 제작 스튜디오",
+  "short_name": "Wave Lab",
+  "description": "기획·디자인·웹앱 제작·배포까지 한 번에. 웨이브 랩.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A0A0F",
+  "theme_color": "#0A0A0F",
+  "lang": "ko",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
