@@ -145,14 +145,14 @@ export function Hero() {
               </a>
             </div>
 
-            <dl className="mt-12 grid animate-fade-up grid-cols-3 gap-4 border-t border-white/[0.07] pt-6 [animation-delay:320ms]">
+            <dl className="mt-12 grid animate-fade-up gap-3 border-t border-white/[0.07] pt-6 [animation-delay:320ms] sm:grid-cols-3 sm:gap-4">
               {stats.map(({ icon: Icon, label, value }) => (
-                <div key={label}>
-                  <dt className="flex items-start gap-1.5 text-[10.5px] leading-[1.4] text-sub">
-                    <Icon className="mt-[1px] h-3.5 w-3.5 shrink-0 text-indigo/80" />
+                <div key={label} className="flex items-baseline justify-between gap-3 sm:block">
+                  <dt className="flex items-center gap-1.5 text-[11px] leading-snug text-sub">
+                    <Icon className="h-3.5 w-3.5 shrink-0 text-indigo/80" />
                     <span>{label}</span>
                   </dt>
-                  <dd className="mt-1.5 text-[17px] font-semibold tracking-tight text-ink">{value}</dd>
+                  <dd className="text-[16px] font-semibold tracking-tight text-ink sm:mt-1.5 sm:text-[17px]">{value}</dd>
                 </div>
               ))}
             </dl>
