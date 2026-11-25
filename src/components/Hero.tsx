@@ -1,9 +1,9 @@
-import { ArrowRight, ArrowUpRight, Globe2, Smartphone, Sparkles, Timer } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, Globe2, MonitorSmartphone, Timer } from 'lucide-react';
 
 const stats = [
   { icon: Globe2, label: '실제 운영 중인 라이브 프로젝트', value: '6종' },
   { icon: Timer, label: '평균 제작 기간', value: '1~4일' },
-  { icon: Smartphone, label: '모바일 · 데스크톱 대응', value: '100%' },
+  { icon: MonitorSmartphone, label: '모바일 · 데스크톱 대응', value: '100%' },
 ];
 
 const bars = [38, 52, 44, 68, 57, 82, 74];
@@ -75,21 +75,15 @@ function HeroMock() {
         </div>
       </div>
 
-      <div className="absolute -left-4 top-24 hidden animate-drift rounded-xl border border-white/10 bg-[#12121A]/95 px-3 py-2 shadow-card backdrop-blur sm:block">
-        <p className="flex items-center gap-1.5 text-[10.5px] font-medium text-ink/90">
-          <Smartphone className="h-3.5 w-3.5 text-sky" />
-          홈 화면에 앱처럼 설치
-        </p>
-      </div>
-
-      <div
-        className="absolute -right-3 bottom-14 hidden animate-drift rounded-xl border border-white/10 bg-[#12121A]/95 px-3 py-2 shadow-card backdrop-blur sm:block"
-        style={{ animationDelay: '2.4s' }}
-      >
-        <p className="flex items-center gap-1.5 text-[10.5px] font-medium text-ink/90">
-          <Sparkles className="h-3.5 w-3.5 text-mint" />
+      <div className="mt-3 flex flex-wrap items-center justify-center gap-2">
+        <span className="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1.5 text-[10.5px] font-medium text-ink/80">
+          <span className="mr-1.5 inline-block align-middle text-sky">●</span>
+          홈 화면에 앱처럼 설치 (PWA)
+        </span>
+        <span className="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1.5 text-[10.5px] font-medium text-ink/80">
+          <span className="mr-1.5 inline-block align-middle text-mint">●</span>
           기획 · 디자인 · 배포 한 번에
-        </p>
+        </span>
       </div>
     </div>
   );
