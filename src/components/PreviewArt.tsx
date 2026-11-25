@@ -40,29 +40,29 @@ export function PreviewArt({ kind, from, to }: Props) {
 }
 
 function ChartArt() {
-  const candles = [
-    { x: 6, h: 26, y: 34, up: true },
-    { x: 20, h: 16, y: 44, up: false },
-    { x: 34, h: 34, y: 22, up: true },
-    { x: 48, h: 22, y: 34, up: false },
-    { x: 62, h: 40, y: 12, up: true },
-    { x: 76, h: 30, y: 26, up: true },
-    { x: 90, h: 18, y: 40, up: false },
-  ];
+  const candles = [22, 34, 26, 44, 38, 52, 30];
   return (
-    <div className="relative h-full w-full rounded-lg border border-white/10 bg-[#0B0B12]/70 p-2.5 backdrop-blur-sm">
+    <div className="relative h-full w-full overflow-hidden rounded-lg border border-white/10 bg-[#0B0B12]/70 p-2.5 backdrop-blur-sm">
       <div className="flex h-full items-end gap-[6%]">
-        {candles.map((c, i) => (
-          <div key={i} className="relative flex flex-1 flex-col justify-end" style={{ height: '100%' }}>
-            <div
-              className={`mx-auto w-[62%] rounded-[2px] ${c.up ? 'bg-emerald-400/80' : 'bg-rose-400/70'}`}
-              style={{ height: `${c.h}px`, marginBottom: `${c.y / 3}px` }}
-            />
-          </div>
+        {candles.map((h, i) => (
+          <div
+            key={i}
+            className={`flex-1 rounded-t-[3px] ${i % 3 === 1 ? 'bg-rose-400/60' : 'bg-emerald-400/70'}`}
+            style={{ height: `${h}%` }}
+          />
         ))}
       </div>
-      <svg className="pointer-events-none absolute inset-x-2.5 bottom-2.5 h-16 w-[calc(100%-20px)]" viewBox="0 0 100 40" preserveAspectRatio="none">
-        <path d="M2 30 L18 24 L32 27 L48 16 L62 20 L78 9 L96 13" fill="none" stroke="rgba(96,165,250,0.55)" strokeWidth="1.4" />
+      <svg
+        className="pointer-events-none absolute inset-2.5 h-[calc(100%-20px)] w-[calc(100%-20px)]"
+        viewBox="0 0 100 40"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M2 28 L18 22 L32 25 L48 15 L62 18 L78 8 L96 12"
+          fill="none"
+          stroke="rgba(147,197,253,0.85)"
+          strokeWidth="1.2"
+        />
       </svg>
     </div>
   );
@@ -121,12 +121,13 @@ function MapArt() {
   return (
     <div className="relative h-full w-full overflow-hidden rounded-lg border border-white/10 bg-[#0B0B12]/70 backdrop-blur-sm">
       <svg viewBox="0 0 200 110" className="h-full w-full" preserveAspectRatio="none">
-        <g stroke="rgba(255,255,255,0.13)" strokeWidth="1">
+        <g fill="none" stroke="rgba(255,255,255,0.12)" strokeWidth="1">
           <path d="M-10 78 L70 60 L120 72 L210 50" />
           <path d="M30 -10 L52 50 L40 120" />
           <path d="M120 -10 L108 45 L130 120" />
+          <path d="M-10 22 L80 30 L150 18 L210 34" />
         </g>
-        <path d="M-10 40 L60 30 L110 44 L210 28" stroke="rgba(251,191,36,0.5)" strokeWidth="1.6" fill="none" />
+        <path d="M-10 40 L60 30 L110 44 L210 28" fill="none" stroke="rgba(251,191,36,0.6)" strokeWidth="1.8" />
       </svg>
       <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
         <span className="relative flex h-6 w-6 items-center justify-center">
